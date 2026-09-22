@@ -25,8 +25,7 @@ class Mylist2<T> {
     }
         
     public void add(T a){
-        if(n<Size) 
-            Array[n++] = a;
+        if(n<Size) Array[n++] = a;
         else{
             changeSize(Size*2);
             Array[n++] = a;
@@ -34,8 +33,7 @@ class Mylist2<T> {
     }
 
     public void deleteByIndex(int i){
-        if(i>n || i<0) 
-            System.out.println("Out of Bound");
+        if(i>n || i<0) System.out.println("Out of Bound");
         else{ 
             for(int j = i; j<n-1; j++){
                 Array[j] = Array[j+1];
