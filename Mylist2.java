@@ -67,8 +67,8 @@ class Mylist2<T> {
 
         Mylist2<String> s = new Mylist2<>();
         s.add("Shivam");
-        s.add("Rahul");
-        s.add("Aman");
+        s.add("Pranav");
+        s.add("Adarsh");
         s.retrieve(1);
     }
 }
