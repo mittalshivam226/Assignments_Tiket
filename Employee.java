@@ -28,6 +28,11 @@ class Employee {
         m.deleteByIndex(1);
         m.retrieve(1);
     }
+    @Override
+    public String toString() {
+        return "ID: " + id + " Name: " + name + " Age: " + age + " DOJ: " + doj;
+    }
+
 }
 
 class Mylist<T> {
@@ -59,8 +64,7 @@ class Mylist<T> {
     }
 
     public void add(T a){
-        if(n<Size)
-            Array[n++] = a;
+        if(n<Size) Array[n++] = a;
         else{
             changeSize(Size*2);
             Array[n++] = a;
@@ -85,8 +89,8 @@ class Mylist<T> {
 
     public void retrieve(int i){
         if(i>=Size || i>=n || i<0) System.out.println("Out of Scope");
-        else System.out.println("Value = " + (T)Array[i]);
+        else System.out.println((T)Array[i]);
     }
 
-    
+
 }
