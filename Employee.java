@@ -53,7 +53,7 @@ class Mylist<T> {
     }
 
     public void sizeCheck(){
-        if(n<=Size/2){
+        if(n<=Size/4){
             changeSize(Size/2);
             System.out.println("Size Decreased by half");
         }
@@ -77,7 +77,9 @@ class Mylist<T> {
             for(int j = i; j<n-1; j++){
                 Array[j] = Array[j+1];
             }
-            Size--; n--;
+            n--;
+            sizeCheck();
+
         }
     }
 
@@ -89,7 +91,7 @@ class Mylist<T> {
 
     public void retrieve(int i){
         if(i>=Size || i>=n || i<0) System.out.println("Out of Scope");
-        else System.out.println((T)Array[i]);
+        else System.out.println(Array[i]);
     }
 
 
