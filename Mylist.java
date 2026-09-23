@@ -13,7 +13,7 @@ class Mylist {
         Array = newArray;
     }
     public void sizeCheck(){
-        if(n<=Size/2){
+        if(n<=Size/4){
             changeSize(Size/2);
             System.out.println("Size Decreased by half");
         }
@@ -36,7 +36,8 @@ class Mylist {
             for(int j = i; j<n-1; j++){
                 Array[j] = Array[j+1];
             }
-            Size--; n--;
+            n--;
+            sizeCheck();
         }
     }
     public void deleteByValue(int value){
